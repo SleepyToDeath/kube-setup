@@ -1,0 +1,22 @@
+[Unit]
+Description=Kubernetes Kubelet
+Documentation=https://github.com/kubernetes/kubernetes
+Requires=docker.service
+After=docker.service
+
+[Service]
+ExecStart=/usr/bin/kubelet \
+--api-servers=https://172.26.187.121:443 \
+--register-node=true \
+--allow-privileged=true \
+--kubeconfig=/var/lib/kubelet/kubeconfig \
+--node-ip=172.26.187.121 \
+--config=/etc/kubernetes/manifests \
+--cluster-dns=10.100.0.10 \
+--cluster_domain=cluster.local \
+--logtostderr=true
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

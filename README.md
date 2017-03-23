@@ -1,8 +1,13 @@
 ### What's this?
 This is a set of bash scripts and config file that I used to setup a custumized kubernetes cluster.
-I recommand you using minikube or follow other solutions in kubernetes's website if you don't 
+I recommend you using minikube or follow other solutions in kubernetes's website if you don't 
 have special requirement. This is only for thoes who has to setup a custumized kubernetes cluster,
 especially in bare-matel environment(it should also work in virtual machines, though), for some reason.
+I also recommend you reading 
+[Creating a Custom Cluster from Scratch](https://kubernetes.io/docs/getting-started-guides/scratch/)
+and
+[Deploying Kubernetes with Calico Networking on Ubuntu](https://kubernetes.io/docs/getting-started-guides/ubuntu/calico/)
+to better understand what it's doing.
 
 It works on amd64 linux system. Kubernetes version is v1.5.4; Calico(for overlay network) version is v1.0.2
 

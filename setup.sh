@@ -1,4 +1,7 @@
 #!/bin/bash
-./ssl/ssl.sh
-./calico/calico.sh
-./kube/kube-install.sh
+cd ./ssl
+./ssl.sh
+cd ../calico
+./calico.sh
+cd ../kube
+./kube-install.sh
